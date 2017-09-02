@@ -1,6 +1,6 @@
 # 目录
 
-* [Java8 - 介绍](README.md)
+* [Java8 - 介绍](introduction.md)
 * [Java8 - lambda表达式](complete-lambda-expressions.md)
 * [Java8 - 方法引用](lambda-method-references.md)
 * [Java8 - 默认方法](default-methods.md)
