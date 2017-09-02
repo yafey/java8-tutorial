@@ -92,5 +92,5 @@ max.ifPresent(System.out::println);
 
 这是Java 8 lambda 增强功能中的四种方法引用。
 
-文章出处：https://junicorn.gitbooks.io/java8-tutorial/introduction.html
+原文出处：https://junicorn.gitbooks.io/java8-tutorial/introduction.html
 
