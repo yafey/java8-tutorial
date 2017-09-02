@@ -1,4 +1,4 @@
-# Java8 教程
+# Java8 介绍
 
 Java8在[2014年初](https://blogs.oracle.com/thejavatutorials/jdk-8-is-released)发布，在Java8中大家讨论最多的特性是lambda表达式。
 它还有许多重要的功能，像默认方法、Stream API、新的日期时间API。让我们通过示例来了解这些新功能。
