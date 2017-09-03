@@ -7,7 +7,7 @@
 Java8 中包含了四种类型的方法引用。
 
 | 方法引用       | 描述    |  例子  |
-| --------   | -----:   | :----: |
+| --------   | -----   | ---- |
 | 静态方法引用        | 用于引用类的静态方法     |   `Math::max` 相当于 `Math.max(x,y)`    |
 | 从对象中引用实例方法       | 使用对象的引用来调用实例方法    |   ` System.out::println` 相当于 ` System.out.println(x)`    |
 | 从类中引用实例方法       | 在上下文提供的对象的引用上调用实例方法     |   ` String::length` 相当于 `str.length()`    |
@@ -100,5 +100,6 @@ max.ifPresent(System.out::println);
 
 这是Java8 lambda 增强功能中的四种方法引用。
 
-原文出处：https://howtodoinjava.com/java-8/lambda-method-references-example
+学习愉快！
 
+原文出处：https://howtodoinjava.com/java-8/lambda-method-references-example

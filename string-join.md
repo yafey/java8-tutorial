@@ -35,3 +35,5 @@ Asia/Aden, America/Cuiaba, Etc/GMT+9, Etc/GMT+8.....
 所以下次当你在使用 java8 并且想拼接字符串时，记得你的工具箱中已经有一个方便的方法，请尽情使用它吧！
 
 学习愉快！
+
+原文出处：https://howtodoinjava.com/java-8/java-8-string-join-csv-example
