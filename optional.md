@@ -4,4 +4,6 @@
 
 “我叫它价值十亿美元的错误” —— [Sir C. A. R. Hoare](https://en.wikipedia.org/wiki/Tony_Hoare)，他在提出空引用这个概念时说。
 
-在本文中，我将讨论 [java 8 新特性](https://howtodoinjava.com/category/java-8/) 中 [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html) 的具体用法。为了阐明诸多概念之间的异同，本文将被划分为多个部分一一讲解。
+在本文中，我将讨论 [java 8 新特性](https://howtodoinjava.com/category/java-8/) 中 [Optional](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html) 的具体用法。为了阐明诸多概念之间的异同，本文将被划分为多个部分一一讲解。	
+
+```讨论的要点```
