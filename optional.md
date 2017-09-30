@@ -42,4 +42,24 @@
 
 一个比较好的解决方案是在定义引用类型时总是去将它初始化为某个值，并且不要初始化为null。采用这种方式，你的程序永远不会抛出 ```空指针异常``` 。但是有些情况下，引用并没有一个默认的初始值，那么我们又该怎么去处理呢？
 
-上述的问题在很多意义上都是正确地。那么，Java 8 ```Optionals``` 是最好的答案。
+上述的答案都是正确的，而且在很多时候被使用。但是，Java 8 ```Optionals``` 无疑是最好的答案。
+
+3）Java 8的Optionals提供了一种怎样的解决方案？
+
+Optional提供了一种可以替代一个指向非空值但是可以为空T的方法。一个Optional类或许包含了一个指向非空变量的引用（这种情况下我们说这个引用是Present的），或者什么也没包含（这种情况下我们说这个引用是absent）。
+
+请记住，永远不要说optional包含null
+	
+
+    Optional<Integer> canBeEmpty1 = Optional.of(5);
+	canBeEmpty1.isPresent();                    // returns true
+	canBeEmpty1.get();                          // returns 5
+	 
+	Optional<Integer> canBeEmpty2 = Optional.empty();
+	canBeEmpty2.isPresent();                    // returns false
+
+我们可以看到 **Optional作为保存单变量的容器，既可以保存值，也可以不保存值。**
+
+必须要指出Optional类并不是为了简单地去替代每一个null引用。它的出现是为了**帮助设计更易于理解的API**，以便我们只需要读方法的声明，就能分辨是否是一个Optional变量。这迫使你去捕获Optional中的变量，然后处理它，同时也处理optional为空的情形。这才是解决因为空引用导致的 ```NullPointerException```。
+
+下面是一些学习在编程中如何使用Optional的例子。
