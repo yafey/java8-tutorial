@@ -63,3 +63,97 @@ Optional提供了一种可以替代一个指向非空值但是可以为空T的�
 必须要指出Optional类并不是为了简单地去替代每一个null引用。它的出现是为了**帮助设计更易于理解的API**，以便我们只需要读方法的声明，就能分辨是否是一个Optional变量。这迫使你去捕获Optional中的变量，然后处理它，同时也处理optional为空的情形。这才是解决因为空引用导致的 ```NullPointerException```。
 
 下面是一些学习在编程中如何使用Optional的例子。
+
+a) 创建一个Optional对象
+ 创建一个Optional对象有三种方式。
+
+i)使用Optional.empty()方法
+
+	Optional<Integer> possible = Optional.empty();
+
+ii）使用Optional.of()方法创建一个带有非空默认值的对象，如果你赋值为null，则会马上抛出空指针异常。
+
+	Optional<Integer> possible = Optional.of(5);
+
+iii)使用Optional.ofNullable()创建一个带有null值的对象。如果值是null，则目标Optional对象将会是空(记得值是缺失，不是null)。
+
+	Optional<Integer> possible = Optional.ofNullable(null);
+	//or
+	Optional<Integer> possible = Optional.ofNullable(5);
+
+b)如果Optional的值是present的，来做一些操作吧
+  得到Optional对象是第一步。现在我们先来检查一下它的内部是否保存了值，然后来使用它。
+
+	Optional<Integer> possible = Optional.of(5);
+	possible.ifPresent(System.out::println);
+
+你可以像下面的代码一样重写你的代码。然而这并不是Optional类的最佳实践，因为这样做和手动检查是否为null没有任何区别，没有任何提升。
+
+	if(possible.isPresent()){
+    System.out.println(possible.get());
+	}
+
+如果Optional对象是空的，不会输出任何东西。
+
+c)默认或者缺省的值和动作
+一个典型的编程模式是如果操作的结果是null，那么最好返回一个默认的值。简要地说，你可以      但是如果使用Optional，你可以像下面那样写你的代码。
+
+	//Assume this value has returned from a method
+	Optional<Company> companyOptional = Optional.empty();
+	 
+	//Now check optional; if value is present then return it,
+	//else create a new Company object and retur it
+	Company company = companyOptional.orElse(new Company());
+	 
+	//OR you can throw an exception as well
+	Company company = companyOptional.orElseThrow(IllegalStateException::new);
+
+d)使用过滤方法拒绝某些特定的值
+
+我们经常调用某个类中的方法去检查一些属性，例如，在下面的示例代码检查Company类是否有 “Finance”部门；如果有，则输出其值。
+
+	Optional<Company> companyOptional = Optional.empty();
+	companyOptional.filter(department -> "Finance".equals(department.getName())
+                    .ifPresent(() -> System.out.println("Finance is present"));
+
+这个过滤方法起了论断的作用。如果Optional对象中值是Present的，并且符合了这个论断，这个过滤方法返回这个值；否则，它返回一个空的Optional对象，你可能已经看出来了，当我们使用过滤方法时，其实和Stream的模式是相似的。
+
+很好，这些代码看起来更接近我们提出的问题，在也没有冗余的检查是否为空的代码。
+
+Wow，我们
+
+
+4）Optional类内部是如何实现的呢？
+
+如果你打开Optional类的源代码，你将会看到如下定义：
+
+	/**
+ 	* If non-null, the value; if null, indicates no value is present
+ 	*/
+	private final T value;
+
+如果你定义一个空的Optional，就像下面这样，static关键字保证了只存在一个空的实例。
+
+	/**
+ 	* Common instance for {@code empty()}.
+ 	*/
+	private static final Optional<?> EMPTY = new Optional<>();
+
+默认的没有参数的构造函数被定义成private的，所以除了上面的三种方式，其他的都不能创建一个实例。
+
+当你创建一个Optional类的对象时，下面的函数会被调用，然后将确定的值传递给value属性。
+	
+	this.value = Objects.requireNonNull(value);
+
+当你试图从Optional容器中获取值时，值如果存在就会被返回，否则抛出 ```NoSuchElementException``` 异常：
+
+	public T get() {
+    if (value == null) {
+        throw new NoSuchElementException("No value present");
+    }
+    return value;
+	}
+
+同样的，定义在Optional类中其他的函数也只操作value属性，点击 [这里](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/util/Optional.java) 查看Optional类的源代码。
+
+5）Optional类的出现是为了解决什么问题？
