@@ -157,3 +157,11 @@ Wow，我们
 同样的，定义在Optional类中其他的函数也只操作value属性，点击 [这里](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/util/Optional.java) 查看Optional类的源代码。
 
 5）Optional类的出现是为了解决什么问题？
+
+Optional试图解决在java整个系统中出现空指针异常的次数，通过设计考虑了返回值可能为null的更具表达意义的API接口来实现。如果Optional类在java设计之初就已经存在了，那么时下的一些函数库和程序可能能更好地处理返回值为null的情况，减少出现空指针异常的次数，总体上减少一些bug。
+
+通过使用Optional类，用户不得不去考虑一些异常情况，除了通过给null一个名字而带来的程序可读性的提高，最大的好处就是              如果你想让你的程序通过编译，你就不得不去考虑值为null的情况，
+
+
+6）Optional不能解决什么问题？
+
