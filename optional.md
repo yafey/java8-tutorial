@@ -164,4 +164,30 @@ Optional试图解决在java整个系统中出现空指针异常的次数，通�
 
 
 6）Optional不能解决什么问题？
+  
+Optional类并不是一种可以避免所有空指针的的机制。例如：一个方法或者构造函数中必须的参数就必须做一下检测。
 
+当使用null时，Optional不会表现出值缺失的意思。所以当你调用一个方法时，为了正确地调用，请查看相关的文档，确保你知道Optional类中值缺失的意思。
+
+• in the domain model layer (it’s not serializable)
+• in DTOs (it’s not serializable)
+• in input parameters of methods
+• in constructor parameters
+
+7）我们应该使用Optional吗？
+ 
+当函数的返回值有可能是null时，我们应该尽可能地去使用它。
+
+下面是从OpenJDK中摘抄的一段文字：
+	The JSR-335 EG felt fairly strongly that Optional should not be on any more than needed to support the optional-return idiom only.
+	Someone suggested maybe even renaming it to “OptionalReturn“.
+
+这段文字明确地表示，当从具体的业务逻辑层，数据库访问层或者实体中返回值时应该使用Optional，如果确定Optional能起到作用的话。
+
+8)结论
+
+在这篇文章中，我们学习到了如何理解和使用java SE8中java.util包下Optional类。Optional存在的目的不是为了替代我们代码中简单的null引用，而是帮助我们设计更清晰明了的API，通过读方法的说明，使用者就能知道有Optional类，可能存在null的情况，从而恰当地去处理它。
+
+这就是这个厉害特性的所有内容，在下面的评论区和我交流你的想法吧。
+
+尽情享受学习的乐趣吧！!
