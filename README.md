@@ -1,4 +1,4 @@
-# Java8 教程
+# Java8 教程 000
 
 [![](https://img.shields.io/badge/开源社区-junicorn-green.svg)](https://github.com/junicorn)
 [![](https://img.shields.io/badge/知乎专栏-跟上Java8-blue.svg)](https://zhuanlan.zhihu.com/java8)
