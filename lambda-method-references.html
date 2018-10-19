@@ -1,0 +1,623 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Java8 - 方法引用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="default-methods.html" />
+    
+    
+    <link rel="prev" href="complete-lambda-expressions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    Java8 - 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="complete-lambda-expressions.html">
+            
+                <a href="complete-lambda-expressions.html">
+            
+                    
+                    Java8 - lambda表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="lambda-method-references.html">
+            
+                <a href="lambda-method-references.html">
+            
+                    
+                    Java8 - 方法引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="default-methods.html">
+            
+                <a href="default-methods.html">
+            
+                    
+                    Java8 - 默认方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="functional-interface.html">
+            
+                <a href="functional-interface.html">
+            
+                    
+                    Java8 - 函数式接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="optional.html">
+            
+                <a href="optional.html">
+            
+                    
+                    Java8 - Optional
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="how-to-use-predicate.html">
+            
+                <a href="how-to-use-predicate.html">
+            
+                    
+                    Java8 - 如何使用Predicate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="date-and-time-api-changes.html">
+            
+                <a href="date-and-time-api-changes.html">
+            
+                    
+                    Java8 - 日期时间API的改变
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="streams-examples.html">
+            
+                <a href="streams-examples.html">
+            
+                    
+                    Java8 - Stream示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="stream-distinct.html">
+            
+                <a href="stream-distinct.html">
+            
+                    
+                    Java8 - Stream Distinct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="read-file-line-by-line.html">
+            
+                <a href="read-file-line-by-line.html">
+            
+                    
+                    Java8 - Stream一行一行读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="list-all-files-in-directory.html">
+            
+                <a href="list-all-files-in-directory.html">
+            
+                    
+                    Java8 - 遍历目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="write-to-file.html">
+            
+                <a href="write-to-file.html">
+            
+                    
+                    Java8 - 写入文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="watchservice-api.html">
+            
+                <a href="watchservice-api.html">
+            
+                    
+                    Java8 - WatchService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="parse-string-to-date.html">
+            
+                <a href="parse-string-to-date.html">
+            
+                    
+                    Java8 - 字符串转日期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="join-string-array.html">
+            
+                <a href="join-string-array.html">
+            
+                    
+                    Java8 - 连接字符串数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="base64-encoding-and-decoding.html">
+            
+                <a href="base64-encoding-and-decoding.html">
+            
+                    
+                    Java8 - Base64编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="exact-airthmetic-operations-supported-in-math-class.html">
+            
+                <a href="exact-airthmetic-operations-supported-in-math-class.html">
+            
+                    
+                    Java8 - Math的精确运算支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="using-comparator-becomes-easier-with-lambda-expressions.html">
+            
+                <a href="using-comparator-becomes-easier-with-lambda-expressions.html">
+            
+                    
+                    Java8 - 比较器使用lambda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="internal-vs-external-iteration.html">
+            
+                <a href="internal-vs-external-iteration.html">
+            
+                    
+                    Java8 - 内部迭代 VS 外部迭代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="regex-predicate-using-pattern-compile.html">
+            
+                <a href="regex-predicate-using-pattern-compile.html">
+            
+                    
+                    Java8 - Regex as Predicate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="string-join.html">
+            
+                <a href="string-join.html">
+            
+                    
+                    Java8 - 字符串拼接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="calculate-difference-between-two-dates.html">
+            
+                <a href="calculate-difference-between-two-dates.html">
+            
+                    
+                    Java8 - 比较日期差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Java8 - 方法引用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x65B9;&#x6CD5;&#x5F15;&#x7528;">&#x65B9;&#x6CD5;&#x5F15;&#x7528;</h1>
+<p>&#x5728; Java 8 &#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>class::methodName</code> &#x8BED;&#x6CD5;&#x5F15;&#x7528;&#x7C7B;&#x6216;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x5B66;&#x4E60;&#x4E00;&#x4E0B; Java 8 &#x4E2D;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#x5F15;&#x7528;&#x3002;</p>
+<h2 id="&#x65B9;&#x6CD5;&#x5F15;&#x7528;&#x7C7B;&#x578B;---&#x5FEB;&#x901F;&#x9884;&#x89C8;">&#x65B9;&#x6CD5;&#x5F15;&#x7528;&#x7C7B;&#x578B; - &#x5FEB;&#x901F;&#x9884;&#x89C8;</h2>
+<p>Java8 &#x4E2D;&#x5305;&#x542B;&#x4E86;&#x56DB;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#x5F15;&#x7528;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x65B9;&#x6CD5;&#x5F15;&#x7528;</th>
+<th>&#x63CF;&#x8FF0;</th>
+<th>&#x4F8B;&#x5B50;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x5F15;&#x7528;</td>
+<td>&#x7528;&#x4E8E;&#x5F15;&#x7528;&#x7C7B;&#x7684;&#x9759;&#x6001;&#x65B9;&#x6CD5;</td>
+<td><code>Math::max</code> &#x76F8;&#x5F53;&#x4E8E; <code>Math.max(x,y)</code></td>
+</tr>
+<tr>
+<td>&#x4ECE;&#x5BF9;&#x8C61;&#x4E2D;&#x5F15;&#x7528;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;</td>
+<td>&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x6765;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;</td>
+<td><code>System.out::println</code> &#x76F8;&#x5F53;&#x4E8E; <code>System.out.println(x)</code></td>
+</tr>
+<tr>
+<td>&#x4ECE;&#x7C7B;&#x4E2D;&#x5F15;&#x7528;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;</td>
+<td>&#x5728;&#x4E0A;&#x4E0B;&#x6587;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x4E0A;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;</td>
+<td><code>String::length</code> &#x76F8;&#x5F53;&#x4E8E; <code>str.length()</code></td>
+</tr>
+<tr>
+<td>&#x5F15;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;</td>
+<td>&#x5F15;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;</td>
+<td><code>ArrayList::new</code> &#x76F8;&#x5F53;&#x4E8E; <code>new ArrayList()</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5F15;&#x7528;&#x9759;&#x6001;&#x65B9;&#x6CD5;---classstaticmethodname">&#x5F15;&#x7528;&#x9759;&#x6001;&#x65B9;&#x6CD5; - Class::staticMethodName</h2>
+<p>&#x4E00;&#x4E2A;&#x4F7F;&#x7528; <code>Math.max()</code> &#x9759;&#x6001;&#x65B9;&#x6CD5;&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+<pre><code class="lang-java">List&lt;Integer&gt; integers = Arrays.asList(<span class="hljs-number">1</span>,<span class="hljs-number">12</span>,<span class="hljs-number">433</span>,<span class="hljs-number">5</span>);
+
+Optional&lt;Integer&gt; max = integers.stream().reduce( Math::max ); 
+
+max.ifPresent(value -&gt; System.out.println(value));
+</code></pre>
+<p>&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-number">433</span>
+</code></pre>
+<h2 id="&#x4ECE;&#x5BF9;&#x8C61;&#x4E2D;&#x5F15;&#x7528;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;---classinstanceinstancemethodname">&#x4ECE;&#x5BF9;&#x8C61;&#x4E2D;&#x5F15;&#x7528;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5; - ClassInstance::instanceMethodName</h2>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x4E86; <code>System.out.println(value)</code> &#x6253;&#x5370;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>System.out::println</code>&#x6253;&#x5370;&#x8FD9;&#x4E2A;&#x503C;&#x3002;</p>
+<pre><code class="lang-java">List&lt;Integer&gt; integers = Arrays.asList(<span class="hljs-number">1</span>,<span class="hljs-number">12</span>,<span class="hljs-number">433</span>,<span class="hljs-number">5</span>);        
+Optional&lt;Integer&gt; max = integers.stream().reduce( Math::max ); 
+max.ifPresent( System.out::println );
+</code></pre>
+<p>&#x8F93;&#x51FA;:</p>
+<pre><code class="lang-bash">433
+</code></pre>
+<h2 id="&#x5F15;&#x7528;&#x7279;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;----classinstancemethodname">&#x5F15;&#x7528;&#x7279;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;  - Class::instanceMethodName</h2>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D; <code>s1.compareTo(s2)</code> &#x88AB;&#x7B80;&#x5199;&#x4E3A; <code>String::compareTo</code>&#x3002;</p>
+<pre><code class="lang-java">List&lt;String&gt; strings = Arrays
+        .asList(<span class="hljs-string">&quot;how&quot;</span>, <span class="hljs-string">&quot;to&quot;</span>, <span class="hljs-string">&quot;do&quot;</span>, <span class="hljs-string">&quot;in&quot;</span>, <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-string">&quot;dot&quot;</span>, <span class="hljs-string">&quot;com&quot;</span>);
+
+List&lt;String&gt; sorted = strings
+        .stream()
+        .sorted((s1, s2) -&gt; s1.compareTo(s2))
+        .collect(Collectors.toList());
+
+System.out.println(sorted);
+
+List&lt;String&gt; sortedAlt = strings
+        .stream()
+        .sorted(String::compareTo)
+        .collect(Collectors.toList());
+
+System.out.println(sortedAlt);
+</code></pre>
+<p>&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-bash">[com&#xFF0C;<span class="hljs-keyword">do</span>&#xFF0C;dot&#xFF0C;how&#xFF0C;<span class="hljs-keyword">in</span>&#xFF0C;java&#xFF0C;to] 
+[com&#xFF0C;<span class="hljs-keyword">do</span>&#xFF0C;dot&#xFF0C;how&#xFF0C;<span class="hljs-keyword">in</span>&#xFF0C;java&#xFF0C;to]
+</code></pre>
+<h2 id="&#x5F15;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;---classnew">&#x5F15;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570; - Class::new</h2>
+<p>&#x4F7F;&#x7528; <code>lambda</code> &#x8868;&#x8FBE;&#x5F0F;&#x4FEE;&#x6539;&#x7B2C;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4ECE;1&#x5230;100&#x7684;&#x96C6;&#x5408;(&#x4E0D;&#x5305;&#x542B;100)&#x3002;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>ArrayList</code> &#x5B9E;&#x4F8B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>ArrayList::new</code>&#x3002;</p>
+<pre><code class="lang-java">List&lt;Integer&gt; integers = IntStream
+                .range(<span class="hljs-number">1</span>, <span class="hljs-number">100</span>)
+                .boxed()
+                .collect(Collectors.toCollection( ArrayList::<span class="hljs-keyword">new</span> ));
+
+Optional&lt;Integer&gt; max = integers.stream().reduce(Math::max); 
+
+max.ifPresent(System.out::println);
+</code></pre>
+<p>&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-bash">99
+</code></pre>
+<p>&#x8FD9;&#x662F;Java8 lambda &#x589E;&#x5F3A;&#x529F;&#x80FD;&#x4E2D;&#x7684;&#x56DB;&#x79CD;&#x65B9;&#x6CD5;&#x5F15;&#x7528;&#x3002;</p>
+<p>&#x5B66;&#x4E60;&#x6109;&#x5FEB;&#xFF01;</p>
+<p>&#x539F;&#x6587;&#x51FA;&#x5904;&#xFF1A;<a href="https://howtodoinjava.com/java-8/lambda-method-references-example" target="_blank">https://howtodoinjava.com/java-8/lambda-method-references-example</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="complete-lambda-expressions.html" class="navigation navigation-prev " aria-label="Previous page: Java8 - lambda表达式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="default-methods.html" class="navigation navigation-next " aria-label="Next page: Java8 - 默认方法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Java8 - 方法引用","level":"1.4","depth":1,"next":{"title":"Java8 - 默认方法","level":"1.5","depth":1,"path":"default-methods.md","ref":"default-methods.md","articles":[]},"previous":{"title":"Java8 - lambda表达式","level":"1.3","depth":1,"path":"complete-lambda-expressions.md","ref":"complete-lambda-expressions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"lambda-method-references.md","mtime":"2018-10-19T18:28:34.780Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-19T18:30:04.683Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

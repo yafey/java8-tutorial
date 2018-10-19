@@ -1,0 +1,529 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Java8 - Math的精确运算支持 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="using-comparator-becomes-easier-with-lambda-expressions.html" />
+    
+    
+    <link rel="prev" href="base64-encoding-and-decoding.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    Java8 - 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="complete-lambda-expressions.html">
+            
+                <a href="complete-lambda-expressions.html">
+            
+                    
+                    Java8 - lambda表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="lambda-method-references.html">
+            
+                <a href="lambda-method-references.html">
+            
+                    
+                    Java8 - 方法引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="default-methods.html">
+            
+                <a href="default-methods.html">
+            
+                    
+                    Java8 - 默认方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="functional-interface.html">
+            
+                <a href="functional-interface.html">
+            
+                    
+                    Java8 - 函数式接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="optional.html">
+            
+                <a href="optional.html">
+            
+                    
+                    Java8 - Optional
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="how-to-use-predicate.html">
+            
+                <a href="how-to-use-predicate.html">
+            
+                    
+                    Java8 - 如何使用Predicate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="date-and-time-api-changes.html">
+            
+                <a href="date-and-time-api-changes.html">
+            
+                    
+                    Java8 - 日期时间API的改变
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="streams-examples.html">
+            
+                <a href="streams-examples.html">
+            
+                    
+                    Java8 - Stream示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="stream-distinct.html">
+            
+                <a href="stream-distinct.html">
+            
+                    
+                    Java8 - Stream Distinct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="read-file-line-by-line.html">
+            
+                <a href="read-file-line-by-line.html">
+            
+                    
+                    Java8 - Stream一行一行读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="list-all-files-in-directory.html">
+            
+                <a href="list-all-files-in-directory.html">
+            
+                    
+                    Java8 - 遍历目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="write-to-file.html">
+            
+                <a href="write-to-file.html">
+            
+                    
+                    Java8 - 写入文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="watchservice-api.html">
+            
+                <a href="watchservice-api.html">
+            
+                    
+                    Java8 - WatchService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="parse-string-to-date.html">
+            
+                <a href="parse-string-to-date.html">
+            
+                    
+                    Java8 - 字符串转日期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="join-string-array.html">
+            
+                <a href="join-string-array.html">
+            
+                    
+                    Java8 - 连接字符串数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="base64-encoding-and-decoding.html">
+            
+                <a href="base64-encoding-and-decoding.html">
+            
+                    
+                    Java8 - Base64编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.19" data-path="exact-airthmetic-operations-supported-in-math-class.html">
+            
+                <a href="exact-airthmetic-operations-supported-in-math-class.html">
+            
+                    
+                    Java8 - Math的精确运算支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="using-comparator-becomes-easier-with-lambda-expressions.html">
+            
+                <a href="using-comparator-becomes-easier-with-lambda-expressions.html">
+            
+                    
+                    Java8 - 比较器使用lambda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="internal-vs-external-iteration.html">
+            
+                <a href="internal-vs-external-iteration.html">
+            
+                    
+                    Java8 - 内部迭代 VS 外部迭代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="regex-predicate-using-pattern-compile.html">
+            
+                <a href="regex-predicate-using-pattern-compile.html">
+            
+                    
+                    Java8 - Regex as Predicate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="string-join.html">
+            
+                <a href="string-join.html">
+            
+                    
+                    Java8 - 字符串拼接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="calculate-difference-between-two-dates.html">
+            
+                <a href="calculate-difference-between-two-dates.html">
+            
+                    
+                    Java8 - 比较日期差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Java8 - Math的精确运算支持</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="math&#x7684;&#x7CBE;&#x786E;&#x8FD0;&#x7B97;&#x652F;&#x6301;">Math&#x7684;&#x7CBE;&#x786E;&#x8FD0;&#x7B97;&#x652F;&#x6301;</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="base64-encoding-and-decoding.html" class="navigation navigation-prev " aria-label="Previous page: Java8 - Base64编解码">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="using-comparator-becomes-easier-with-lambda-expressions.html" class="navigation navigation-next " aria-label="Next page: Java8 - 比较器使用lambda">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Java8 - Math的精确运算支持","level":"1.19","depth":1,"next":{"title":"Java8 - 比较器使用lambda","level":"1.20","depth":1,"path":"using-comparator-becomes-easier-with-lambda-expressions.md","ref":"using-comparator-becomes-easier-with-lambda-expressions.md","articles":[]},"previous":{"title":"Java8 - Base64编解码","level":"1.18","depth":1,"path":"base64-encoding-and-decoding.md","ref":"base64-encoding-and-decoding.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"exact-airthmetic-operations-supported-in-math-class.md","mtime":"2018-10-19T18:28:34.776Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-19T18:30:04.683Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,653 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Java8 - Optional · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="how-to-use-predicate.html" />
+    
+    
+    <link rel="prev" href="functional-interface.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    Java8 - 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="complete-lambda-expressions.html">
+            
+                <a href="complete-lambda-expressions.html">
+            
+                    
+                    Java8 - lambda表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="lambda-method-references.html">
+            
+                <a href="lambda-method-references.html">
+            
+                    
+                    Java8 - 方法引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="default-methods.html">
+            
+                <a href="default-methods.html">
+            
+                    
+                    Java8 - 默认方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="functional-interface.html">
+            
+                <a href="functional-interface.html">
+            
+                    
+                    Java8 - 函数式接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="optional.html">
+            
+                <a href="optional.html">
+            
+                    
+                    Java8 - Optional
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="how-to-use-predicate.html">
+            
+                <a href="how-to-use-predicate.html">
+            
+                    
+                    Java8 - 如何使用Predicate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="date-and-time-api-changes.html">
+            
+                <a href="date-and-time-api-changes.html">
+            
+                    
+                    Java8 - 日期时间API的改变
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="streams-examples.html">
+            
+                <a href="streams-examples.html">
+            
+                    
+                    Java8 - Stream示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="stream-distinct.html">
+            
+                <a href="stream-distinct.html">
+            
+                    
+                    Java8 - Stream Distinct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="read-file-line-by-line.html">
+            
+                <a href="read-file-line-by-line.html">
+            
+                    
+                    Java8 - Stream一行一行读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="list-all-files-in-directory.html">
+            
+                <a href="list-all-files-in-directory.html">
+            
+                    
+                    Java8 - 遍历目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="write-to-file.html">
+            
+                <a href="write-to-file.html">
+            
+                    
+                    Java8 - 写入文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="watchservice-api.html">
+            
+                <a href="watchservice-api.html">
+            
+                    
+                    Java8 - WatchService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="parse-string-to-date.html">
+            
+                <a href="parse-string-to-date.html">
+            
+                    
+                    Java8 - 字符串转日期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="join-string-array.html">
+            
+                <a href="join-string-array.html">
+            
+                    
+                    Java8 - 连接字符串数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="base64-encoding-and-decoding.html">
+            
+                <a href="base64-encoding-and-decoding.html">
+            
+                    
+                    Java8 - Base64编解码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="exact-airthmetic-operations-supported-in-math-class.html">
+            
+                <a href="exact-airthmetic-operations-supported-in-math-class.html">
+            
+                    
+                    Java8 - Math的精确运算支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="using-comparator-becomes-easier-with-lambda-expressions.html">
+            
+                <a href="using-comparator-becomes-easier-with-lambda-expressions.html">
+            
+                    
+                    Java8 - 比较器使用lambda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="internal-vs-external-iteration.html">
+            
+                <a href="internal-vs-external-iteration.html">
+            
+                    
+                    Java8 - 内部迭代 VS 外部迭代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="regex-predicate-using-pattern-compile.html">
+            
+                <a href="regex-predicate-using-pattern-compile.html">
+            
+                    
+                    Java8 - Regex as Predicate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="string-join.html">
+            
+                <a href="string-join.html">
+            
+                    
+                    Java8 - 字符串拼接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="calculate-difference-between-two-dates.html">
+            
+                <a href="calculate-difference-between-two-dates.html">
+            
+                    
+                    Java8 - 比较日期差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Java8 - Optional</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="optional">Optional</h1>
+<p>&#x6211;&#x4EEC;&#x5728;&#x5199;&#x7A0B;&#x5E8F;&#x65F6;&#x4E00;&#x5B9A;&#x90FD;&#x9047;&#x5230;&#x8FC7; <code>&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;</code>&#x3002;&#x5B83;&#x901A;&#x5E38;&#x53D1;&#x751F;&#x5728;&#x4F60;&#x8BD5;&#x56FE;&#x53BB;&#x5F15;&#x7528;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x88AB;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x88AB;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x7A7A;&#x6216;&#x8005;&#x6CA1;&#x6709;&#x6307;&#x5411;&#x4EFB;&#x4F55;&#x5B9E;&#x4F8B;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3002;<strong><em>&#x7A7A;&#x4EC5;&#x4EC5;&#x53EA;&#x662F;&#x610F;&#x5473;&#x7740;&#x6CA1;&#x6709;&#x503C;</em></strong>&#xFF0C;&#x6700;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x662F;&#xFF0C;&#x7F57;&#x9A6C;&#x4EBA;&#x662F;&#x552F;&#x4E00;&#x6CA1;&#x6709;&#x9047;&#x5230;&#x8FC7;&#x7A7A;&#xFF0C;&#x4ECE; 1 &#x5F00;&#x59CB;&#x8BA1;&#x6570; 1,2,3...&#xFF08;&#x6CA1;&#x6709;0&#xFF09; &#x7684;&#x4EBA;&#xFF0C;&#x6216;&#x8BB8;&#xFF0C;&#x4ED6;&#x4EEC;&#x6CA1;&#x6709;&#x6A21;&#x62DF;&#x5E02;&#x573A;&#x4E0A;&#x6CA1;&#x6709;&#x82F9;&#x679C;&#x7684;&#x60C5;&#x51B5;&#x3002;[:-)]</p>
+<p>&#x201C;&#x6211;&#x53EB;&#x5B83;&#x4EF7;&#x503C;&#x5341;&#x4EBF;&#x7F8E;&#x5143;&#x7684;&#x9519;&#x8BEF;&#x201D; &#x2014;&#x2014; <a href="https://en.wikipedia.org/wiki/Tony_Hoare" target="_blank">Sir C. A. R. Hoare</a>&#xFF0C;&#x4ED6;&#x5728;&#x63D0;&#x51FA;&#x7A7A;&#x5F15;&#x7528;&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#x65F6;&#x8BF4;&#x3002;</p>
+<p>&#x5728;&#x672C;&#x6587;&#x4E2D;&#xFF0C;&#x6211;&#x5C06;&#x8BA8;&#x8BBA; <a href="https://howtodoinjava.com/category/java-8/" target="_blank">java 8 &#x65B0;&#x7279;&#x6027;</a> &#x4E2D; <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" target="_blank">Optional</a> &#x7684;&#x5177;&#x4F53;&#x7528;&#x6CD5;&#x3002;&#x4E3A;&#x4E86;&#x9610;&#x660E;&#x8BF8;&#x591A;&#x6982;&#x5FF5;&#x4E4B;&#x95F4;&#x7684;&#x5F02;&#x540C;&#xFF0C;&#x672C;&#x6587;&#x5C06;&#x88AB;&#x5212;&#x5206;&#x4E3A;&#x591A;&#x4E2A;&#x90E8;&#x5206;&#x4E00;&#x4E00;&#x8BB2;&#x89E3;&#x3002;    </p>
+<pre><code>&#x8BA8;&#x8BBA;&#x7684;&#x8981;&#x70B9;
+
+1&#xFF09;&#x4EC0;&#x4E48;&#x662F;null&#x7C7B;&#x578B;&#xFF1F;
+2&#xFF09;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;null&#x503C;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF1F;
+3&#xFF09;Java8&#x4E2D;&#x7684;Optional&#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x600E;&#x6837;&#x7684;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1F;
+ a&#xFF09;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Optional&#x5BF9;&#x8C61;
+ b&#xFF09;&#x82E5;&#x503C;&#x5B58;&#x5728;&#x5219;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;
+ c&#xFF09;&#x9ED8;&#x8BA4;&#x6216;&#x8005;&#x7F3A;&#x7701;&#x7684;&#x503C;&#x548C;&#x884C;&#x4E3A;
+ d&#xFF09;&#x4F7F;&#x7528;&#x8FC7;&#x6EE4;&#x5668;&#x65B9;&#x6CD5;&#x62D2;&#x7EDD;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x503C;
+4&#xFF09;Optional&#x5185;&#x90E8;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#xFF1F;
+5&#xFF09;Optional&#x8BD5;&#x56FE;&#x53BB;&#x89E3;&#x51B3;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF1F;
+6&#xFF09;Optional&#x4E0D;&#x80FD;&#x89E3;&#x51B3;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF1F;
+7&#xFF09;Optional&#x5E94;&#x8BE5;&#x600E;&#x6837;&#x88AB;&#x4F7F;&#x7528;&#x5462;&#xFF1F;
+8&#xFF09;&#x6700;&#x540E;&#x7684;&#x7ED3;&#x8BBA;
+</code></pre><p>1&#xFF09;&#x4EC0;&#x4E48;&#x662F;Null&#x7C7B;&#x578B;&#xFF1F;</p>
+<p>&#x5728;java&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5F15;&#x7528;&#x53BB;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x7684;&#x7684;&#x5F15;&#x7528;&#x6CA1;&#x6709;&#x6307;&#x5411;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4F1A;&#x628A;&#x8FD9;&#x4E2A;&#x5F15;&#x7528;&#x7F6E;&#x4E3A;Null&#xFF0C;&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x8BE5;&#x5F15;&#x7528;&#x6CA1;&#x6709;&#x503C;&#xFF0C;&#x5BF9;&#x5427;&#xFF1F;</p>
+<p>&#x867D;&#x7136;null&#x503C;&#x7684;&#x4F7F;&#x7528;&#x975E;&#x5E38;&#x666E;&#x904D;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x5F88;&#x5C11;&#x4F1A;&#x53BB;&#x4ED4;&#x7EC6;&#x5730;&#x7814;&#x7A76;&#x5B83;&#x3002;&#x4F8B;&#x5982;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x521D;&#x59CB;&#x5316;&#x4E3A;null&#xFF0C;&#x7A0B;&#x5E8F;&#x5458;&#x901A;&#x5E38;&#x4F1A;&#x7ED9;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x503C;&#x7684;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x7F6E;null&#xFF0C;&#x603B;&#x4F53;&#x4E0A;&#x8BF4;&#xFF0C;null&#x503C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x6211;&#x4EEC;&#x4E0D;&#x77E5;&#x9053;&#x5177;&#x4F53;&#x7684;&#x6216;&#x8005;&#x6CA1;&#x6709;&#x5177;&#x4F53;&#x6307;&#x5411;&#x7684;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x3002;</p>
+<pre><code>&#x8865;&#x5145;&#xFF0C;&#x5728;java&#x4E2D;&#xFF0C;null&#x662F;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x800C;&#x53C8;&#x7279;&#x6B8A;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x6CA1;&#x6709;&#x540D;&#x5B57;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4E0D;&#x80FD;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A;null&#x7684;&#x53D8;&#x91CF;&#x6216;&#x8005;&#x5C06;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;
+&#x5F3A;&#x8F6C;&#x4E3A;null&#xFF1B;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x4EC5;&#x4EC5;&#x6709;&#x4E00;&#x4E2A;&#x80FD;&#x548C;null&#x6709;&#x5173;&#x8054;&#x7684;&#x503C;&#xFF08;&#x4F8B;&#x5982;&#x3002;&#x3002;&#x3002;&#xFF09;&#x3002;&#x8BF7;&#x8BB0;&#x4F4F;&#xFF0C;null&#x4E0D;&#x50CF;java&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#xFF0C;&#x4E00;&#x4E2A;&#x7A7A;&#x5F15;&#x7528;&#x80FD;
+&#x5B8C;&#x5168;&#x6B63;&#x786E;&#xFF0C;&#x5B89;&#x5168;&#x5730;&#x8D4B;&#x7ED9;&#x5176;&#x4ED6;&#x7684;&#x4EFB;&#x4F55;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#xFF0C;&#x800C;&#x4E14;&#x4E0D;&#x62A5;&#x4EFB;&#x4F55;&#x9519;&#x3002;
+</code></pre><p>2&#xFF09;&#x8FD4;&#x56DE;null&#x503C;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF1F;</p>
+<p>&#x901A;&#x5E38;&#x6765;&#x8BF4;&#xFF0C;API&#x7684;&#x8BBE;&#x8BA1;&#x8005;&#x4F1A;&#x9644;&#x4E0A;&#x8BE6;&#x7EC6;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x5E76;&#x8BF4;&#x660E;&#x5728;&#x67D0;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E2A;API&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;null&#x503C;&#xFF0C;&#x73B0;&#x5728;&#x95EE;&#x9898;&#x662F;&#xFF0C;&#x56E0;&#x4E3A;&#x4E00;&#x4E9B;&#x539F;&#x56E0;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x8C03;&#x7528;API&#x7684;&#x65F6;&#x5019;&#x53EF;&#x80FD;&#x4E0D;&#x4F1A;&#x53BB;&#x8BFB;API&#x6587;&#x6863;&#xFF0C;&#x7136;&#x540E;&#x5C31;<strong>&#x5FD8;&#x8BB0;&#x4E86;&#x5904;&#x7406;null&#x503C;&#x7684;&#x60C5;&#x51B5;</strong>&#xFF0C;&#x8FD9;&#x5728;&#x672A;&#x6765;&#x4E00;&#x5B9A;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;bug&#x3002;</p>
+<p>&#x76F8;&#x4FE1;&#x6211;&#xFF0C;&#x8FD9;&#x662F;&#x7ECF;&#x5E38;&#x53D1;&#x751F;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x662F;&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;&#x7684;&#x4E3B;&#x8981;&#x539F;&#x56E0;&#x4E4B;&#x4E00;&#xFF0C;&#x867D;&#x7136;&#x5E76;&#x4E0D;&#x662F;&#x552F;&#x4E00;&#x7684;&#x539F;&#x56E0;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x8BF7;&#x7262;&#x8BB0;&#xFF0C;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;API&#x65F6;&#x770B;&#x770B;&#x5B83;&#x7684;&#x6587;&#x6863;&#x8BF4;&#x660E;&#xFF08;&#x3002;&#x3002;&#x81F3;&#x5C11;&#xFF09;[:-)]&#x3002;</p>
+<pre><code>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x4E86;&#x5728;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;null&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x90A3;&#x4E48;&#x5904;&#x7406;null&#x503C;&#x6700;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;
+</code></pre><p>&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x662F;&#x5728;&#x5B9A;&#x4E49;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x65F6;&#x603B;&#x662F;&#x53BB;&#x5C06;&#x5B83;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x67D0;&#x4E2A;&#x503C;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x8981;&#x521D;&#x59CB;&#x5316;&#x4E3A;null&#x3002;&#x91C7;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x4F60;&#x7684;&#x7A0B;&#x5E8F;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x629B;&#x51FA; <code>&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;</code> &#x3002;&#x4F46;&#x662F;&#x6709;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5F15;&#x7528;&#x5E76;&#x6CA1;&#x6709;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x53C8;&#x8BE5;&#x600E;&#x4E48;&#x53BB;&#x5904;&#x7406;&#x5462;&#xFF1F;</p>
+<p>&#x4E0A;&#x8FF0;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5728;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x884C;&#x5F97;&#x901A;&#x7684;&#x3002;&#x7136;&#x800C;&#xFF0C;Java 8 <code>Optionals</code> &#x65E0;&#x7591;&#x662F;&#x6700;&#x597D;&#x7684;&#x65B9;&#x6848;&#x3002;</p>
+<p>3&#xFF09;Java 8&#x7684;Optionals&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x600E;&#x6837;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1F;</p>
+<p>Optional&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x53EF;&#x4EE5;&#x66FF;&#x4EE3;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x975E;&#x7A7A;&#x503C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;T&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x4E00;&#x4E2A;Optional&#x7C7B;&#x6216;&#x8BB8;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x975E;&#x7A7A;&#x53D8;&#x91CF;&#x7684;&#x5F15;&#x7528;&#xFF08;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x6211;&#x4EEC;&#x8BF4;&#x8FD9;&#x4E2A;&#x5F15;&#x7528;&#x662F;Present&#x7684;&#xFF09;&#xFF0C;&#x6216;&#x8005;&#x4EC0;&#x4E48;&#x4E5F;&#x6CA1;&#x5305;&#x542B;&#xFF08;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x6211;&#x4EEC;&#x8BF4;&#x8FD9;&#x4E2A;&#x5F15;&#x7528;&#x662F;absent&#xFF09;&#x3002;</p>
+<blockquote>
+<p>&#x8BF7;&#x8BB0;&#x4F4F;&#xFF0C;&#x6C38;&#x8FDC;&#x4E0D;&#x8981;&#x8BF4;optional&#x5305;&#x542B;null</p>
+</blockquote>
+<pre><code>Optional&lt;Integer&gt; canBeEmpty1 = Optional.of(5);
+canBeEmpty1.isPresent();                    // returns true
+canBeEmpty1.get();                          // returns 5
+
+Optional&lt;Integer&gt; canBeEmpty2 = Optional.empty();
+canBeEmpty2.isPresent();                    // returns false
+</code></pre><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230; <strong>Optional&#x4F5C;&#x4E3A;&#x4FDD;&#x5B58;&#x5355;&#x53D8;&#x91CF;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x65E2;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x4FDD;&#x5B58;&#x503C;&#x3002;</strong></p>
+<p>&#x5FC5;&#x987B;&#x8981;&#x6307;&#x51FA;Optional&#x7C7B;&#x5E76;&#x4E0D;&#x662F;&#x4E3A;&#x4E86;&#x7B80;&#x5355;&#x5730;&#x53BB;&#x66FF;&#x4EE3;&#x6BCF;&#x4E00;&#x4E2A;null&#x5F15;&#x7528;&#x3002;&#x5B83;&#x7684;&#x51FA;&#x73B0;&#x662F;&#x4E3A;&#x4E86;<strong>&#x5E2E;&#x52A9;&#x8BBE;&#x8BA1;&#x66F4;&#x6613;&#x4E8E;&#x7406;&#x89E3;&#x7684;API</strong>&#xFF0C;&#x4EE5;&#x4FBF;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x8BFB;&#x65B9;&#x6CD5;&#x7684;&#x58F0;&#x660E;&#xFF0C;&#x5C31;&#x80FD;&#x5206;&#x8FA8;&#x662F;&#x5426;&#x662F;&#x4E00;&#x4E2A;Optional&#x53D8;&#x91CF;&#x3002;&#x8FD9;&#x8FEB;&#x4F7F;&#x4F60;&#x53BB;&#x6355;&#x83B7;Optional&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x5904;&#x7406;&#x5B83;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x5904;&#x7406;optional&#x4E3A;&#x7A7A;&#x7684;&#x60C5;&#x5F62;&#x3002;&#x8FD9;&#x624D;&#x662F;&#x89E3;&#x51B3;&#x56E0;&#x4E3A;&#x7A7A;&#x5F15;&#x7528;&#x5BFC;&#x81F4;&#x7684; <code>NullPointerException</code>&#x7684;&#x6B63;&#x786E;&#x4E4B;&#x9053;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E9B;&#x5B66;&#x4E60;&#x5728;&#x7F16;&#x7A0B;&#x4E2D;&#x5982;&#x4F55;&#x4F7F;&#x7528;Optional&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+<p>a) &#x521B;&#x5EFA;&#x4E00;&#x4E2A;Optional&#x5BF9;&#x8C61;
+ &#x521B;&#x5EFA;&#x4E00;&#x4E2A;Optional&#x5BF9;&#x8C61;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>i)&#x4F7F;&#x7528;Optional.empty()&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;Optional&#x3002;</p>
+<pre><code>Optional&lt;Integer&gt; possible = Optional.empty();
+</code></pre><p>ii&#xFF09;&#x4F7F;&#x7528;Optional.of()&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x975E;&#x7A7A;&#x9ED8;&#x8BA4;&#x503C;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8D4B;&#x503C;&#x4E3A;null&#xFF0C;&#x5219;&#x4F1A;&#x629B;&#x51FA;&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;&#x3002;</p>
+<pre><code>Optional&lt;Integer&gt; possible = Optional.of(5);
+</code></pre><p>iii)&#x4F7F;&#x7528;Optional.ofNullable()&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x4E3A;null&#x503C;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5982;&#x679C;&#x503C;&#x662F;null&#xFF0C;&#x5219;&#x76EE;&#x6807;Optional&#x5BF9;&#x8C61;&#x5C06;&#x4F1A;&#x662F;&#x7A7A;(&#x8BB0;&#x5F97;&#x503C;&#x662F;absent&#xFF0C;&#x4E0D;&#x662F;null)&#x3002;</p>
+<pre><code>Optional&lt;Integer&gt; possible = Optional.ofNullable(null);
+//or
+Optional&lt;Integer&gt; possible = Optional.ofNullable(5);
+</code></pre><p>b)&#x5982;&#x679C;Optional&#x7684;&#x503C;&#x662F;present&#x7684;&#xFF0C;&#x6765;&#x505A;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x5427;
+  &#x5F97;&#x5230;Optional&#x5BF9;&#x8C61;&#x662F;&#x7B2C;&#x4E00;&#x6B65;&#x3002;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x68C0;&#x67E5;&#x4E00;&#x4E0B;&#x5B83;&#x7684;&#x5185;&#x90E8;&#x662F;&#x5426;&#x4FDD;&#x5B58;&#x4E86;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x6765;&#x4F7F;&#x7528;&#x5B83;&#x3002;</p>
+<pre><code>Optional&lt;Integer&gt; possible = Optional.of(5);
+possible.ifPresent(System.out::println);
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x50CF;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E00;&#x6837;&#x91CD;&#x5199;&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x7136;&#x800C;&#x8FD9;&#x5E76;&#x4E0D;&#x662F;Optional&#x7C7B;&#x7684;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x6837;&#x505A;&#x548C;&#x624B;&#x52A8;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x4E3A;null&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x533A;&#x522B;&#xFF0C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x63D0;&#x5347;&#x3002;</p>
+<pre><code>if(possible.isPresent()){
+System.out.println(possible.get());
+}
+</code></pre><p>&#x5982;&#x679C;Optional&#x5BF9;&#x8C61;&#x662F;&#x7A7A;&#x7684;&#xFF0C;&#x4E0D;&#x4F1A;&#x8F93;&#x51FA;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#x3002;</p>
+<p>c)&#x9ED8;&#x8BA4;&#x6216;&#x8005;&#x7F3A;&#x7701;&#x7684;&#x503C;&#x548C;&#x52A8;&#x4F5C;
+&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684;&#x7F16;&#x7A0B;&#x6A21;&#x5F0F;&#x662F;&#x5982;&#x679C;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#x662F;null&#xFF0C;&#x90A3;&#x4E48;&#x6700;&#x597D;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x503C;&#x3002;&#x7B80;&#x8981;&#x5730;&#x8BF4;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x7F3A;&#x7701;&#x64CD;&#x4F5C;&#x3002;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4F7F;&#x7528;Optional&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x50CF;&#x4E0B;&#x9762;&#x90A3;&#x6837;&#x5199;&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<pre><code>//Assume this value has returned from a method
+Optional&lt;Company&gt; companyOptional = Optional.empty();
+
+//Now check optional; if value is present then return it,
+//else create a new Company object and retur it
+Company company = companyOptional.orElse(new Company());
+
+//OR you can throw an exception as well
+Company company = companyOptional.orElseThrow(IllegalStateException::new);
+</code></pre><p>d)&#x4F7F;&#x7528;&#x8FC7;&#x6EE4;&#x65B9;&#x6CD5;&#x62D2;&#x7EDD;&#x67D0;&#x4E9B;&#x7279;&#x5B9A;&#x7684;&#x503C;</p>
+<p>&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x8C03;&#x7528;&#x67D0;&#x4E2A;&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x53BB;&#x68C0;&#x67E5;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x68C0;&#x67E5;Company&#x7C7B;&#x662F;&#x5426;&#x6709; &#x201C;Finance&#x201D;&#x90E8;&#x95E8;&#xFF1B;&#x5982;&#x679C;&#x6709;&#xFF0C;&#x5219;&#x8F93;&#x51FA;&#x5176;&#x503C;&#x3002;</p>
+<pre><code>Optional&lt;Company&gt; companyOptional = Optional.empty();
+companyOptional.filter(department -&gt; &quot;Finance&quot;.equals(department.getName())
+                .ifPresent(() -&gt; System.out.println(&quot;Finance is present&quot;));
+</code></pre><p>&#x8FD9;&#x4E2A;&#x8FC7;&#x6EE4;&#x65B9;&#x6CD5;&#x8D77;&#x4E86;&#x8BBA;&#x65AD;&#x7684;&#x4F5C;&#x7528;&#x3002;&#x5982;&#x679C;Optional&#x5BF9;&#x8C61;&#x4E2D;&#x503C;&#x662F;Present&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x7B26;&#x5408;&#x4E86;&#x8FD9;&#x4E2A;&#x8BBA;&#x65AD;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x6EE4;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x503C;&#xFF1B;&#x5426;&#x5219;&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;Optional&#x5BF9;&#x8C61;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x770B;&#x51FA;&#x6765;&#x4E86;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x8FC7;&#x6EE4;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x5176;&#x5B9E;&#x548C;Stream&#x7684;&#x6A21;&#x5F0F;&#x662F;&#x76F8;&#x4F3C;&#x7684;&#x3002;</p>
+<p>&#x5F88;&#x597D;&#xFF0C;&#x8FD9;&#x4E9B;&#x4EE3;&#x7801;&#x770B;&#x8D77;&#x6765;&#x66F4;&#x63A5;&#x8FD1;&#x6211;&#x4EEC;&#x63D0;&#x51FA;&#x95EE;&#x9898;&#x7684;&#x6700;&#x4F73;&#x7B54;&#x6848;&#xFF0C;&#x518D;&#x4E5F;&#x6CA1;&#x6709;&#x5197;&#x4F59;&#x7684;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x4E3A;&#x7A7A;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<p>Wow&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x4ECE;&#x5199;&#x4EE4;&#x4EBA;&#x70E6;&#x95F7;&#x7684;&#x975E;null&#x68C0;&#x67E5;&#x7684;&#x8DEF;&#x4E0A;&#x8FC8;&#x51FA;&#x4E86;&#x4E00;&#x5927;&#x6B65;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5199;&#x66F4;&#x52A0;&#x6613;&#x4E8E;&#x7406;&#x89E3;&#xFF0C;&#x53EF;&#x8BFB;&#x6027;&#x66F4;&#x9AD8;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x800C;&#x4E14;&#x4E0D;&#x4F1A;&#x6709;&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;&#x3002;</p>
+<p>4&#xFF09;Optional&#x7C7B;&#x5185;&#x90E8;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7684;&#x5462;&#xFF1F;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x6253;&#x5F00;Optional&#x7C7B;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#xFF0C;&#x4F60;&#x5C06;&#x4F1A;&#x770B;&#x5230;&#x5982;&#x4E0B;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code>/**
+ * If non-null, the value; if null, indicates no value is present
+ */
+private final T value;
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;Optional&#xFF0C;&#x5C31;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF0C;<strong>static&#x5173;&#x952E;&#x5B57;&#x4FDD;&#x8BC1;&#x4E86;&#x53EA;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x5B9E;&#x4F8B;&#x3002;</strong></p>
+<pre><code>/**
+ * Common instance for {@code empty()}.
+ */
+private static final Optional&lt;?&gt; EMPTY = new Optional&lt;&gt;();
+</code></pre><p>&#x9ED8;&#x8BA4;&#x7684;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x88AB;&#x5B9A;&#x4E49;&#x6210;private&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x9664;&#x4E86;&#x4E0A;&#x9762;&#x7684;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x5176;&#x4ED6;&#x7684;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;</p>
+<p>&#x5F53;&#x4F60;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Optional&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x51FD;&#x6570;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x786E;&#x5B9A;&#x7684;&#x503C;&#x4F20;&#x9012;&#x7ED9;value&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code>this.value = Objects.requireNonNull(value);
+</code></pre><p>&#x5F53;&#x4F60;&#x8BD5;&#x56FE;&#x4ECE;Optional&#x5BB9;&#x5668;&#x4E2D;&#x83B7;&#x53D6;&#x503C;&#x65F6;&#xFF0C;&#x503C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x5C31;&#x4F1A;&#x88AB;&#x8FD4;&#x56DE;&#xFF0C;&#x5426;&#x5219;&#x629B;&#x51FA; <code>NoSuchElementException</code> &#x5F02;&#x5E38;&#xFF1A;</p>
+<pre><code>public T get() {
+if (value == null) {
+    throw new NoSuchElementException(&quot;No value present&quot;);
+}
+return value;
+}
+</code></pre><p>&#x540C;&#x6837;&#x7684;&#xFF0C;&#x5B9A;&#x4E49;&#x5728;Optional&#x7C7B;&#x4E2D;&#x5176;&#x4ED6;&#x7684;&#x51FD;&#x6570;&#x4E5F;&#x53EA;&#x64CD;&#x4F5C;value&#x5C5E;&#x6027;&#xFF0C;&#x70B9;&#x51FB; <a href="http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/util/Optional.java" target="_blank">&#x8FD9;&#x91CC;</a> &#x67E5;&#x770B;Optional&#x7C7B;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x3002;</p>
+<p>5&#xFF09;Optional&#x7C7B;&#x7684;&#x51FA;&#x73B0;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF1F;</p>
+<p>Optional&#x8BD5;&#x56FE;&#x89E3;&#x51B3;&#x5728;java&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x4E2D;&#x51FA;&#x73B0;&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x901A;&#x8FC7;&#x8BBE;&#x8BA1;&#x8003;&#x8651;&#x4E86;&#x8FD4;&#x56DE;&#x503C;&#x53EF;&#x80FD;&#x4E3A;null&#x7684;&#x66F4;&#x5177;&#x8868;&#x8FBE;&#x610F;&#x4E49;&#x7684;API&#x63A5;&#x53E3;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x5982;&#x679C;Optional&#x7C7B;&#x5728;java&#x8BBE;&#x8BA1;&#x4E4B;&#x521D;&#x5C31;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x65F6;&#x4E0B;&#x7684;&#x4E00;&#x4E9B;&#x51FD;&#x6570;&#x5E93;&#x548C;&#x7A0B;&#x5E8F;&#x53EF;&#x80FD;&#x80FD;&#x66F4;&#x597D;&#x5730;&#x5904;&#x7406;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;null&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x51CF;&#x5C11;&#x51FA;&#x73B0;&#x7A7A;&#x6307;&#x9488;&#x5F02;&#x5E38;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x603B;&#x4F53;&#x4E0A;&#x51CF;&#x5C11;&#x4E00;&#x4E9B;bug&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x4F7F;&#x7528;Optional&#x7C7B;&#xFF0C;&#x7528;&#x6237;&#x4E0D;&#x5F97;&#x4E0D;&#x53BB;&#x8003;&#x8651;&#x4E00;&#x4E9B;&#x5F02;&#x5E38;&#x60C5;&#x51B5;&#xFF0C;&#x9664;&#x4E86;&#x901A;&#x8FC7;&#x7ED9;null&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#x800C;&#x5E26;&#x6765;&#x7684;&#x7A0B;&#x5E8F;&#x53EF;&#x8BFB;&#x6027;&#x7684;&#x63D0;&#x9AD8;&#xFF0C;&#x6700;&#x5927;&#x7684;&#x597D;&#x5904;&#x5C31;&#x662F;              &#x5982;&#x679C;&#x4F60;&#x60F3;&#x8BA9;&#x4F60;&#x7684;&#x7A0B;&#x5E8F;&#x901A;&#x8FC7;&#x7F16;&#x8BD1;&#xFF0C;&#x4F60;&#x5C31;&#x4E0D;&#x5F97;&#x4E0D;&#x53BB;&#x8003;&#x8651;&#x503C;&#x4E3A;null&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<p>6&#xFF09;Optional&#x4E0D;&#x80FD;&#x89E3;&#x51B3;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF1F;</p>
+<p>Optional&#x7C7B;<strong>&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x79CD;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x6240;&#x6709;&#x7A7A;&#x6307;&#x9488;&#x7684;&#x7684;&#x673A;&#x5236;</strong>&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x6216;&#x8005;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x5FC5;&#x987B;&#x7684;&#x53C2;&#x6570;&#x5C31;&#x5FC5;&#x987B;&#x505A;&#x4E00;&#x4E0B;&#x68C0;&#x6D4B;&#x3002;</p>
+<p>&#x5F53;&#x4F7F;&#x7528;null&#x65F6;&#xFF0C;Optional&#x4E0D;&#x4F1A;&#x8868;&#x73B0;&#x51FA;&#x503C;&#x7F3A;&#x5931;&#x7684;&#x610F;&#x601D;&#x3002;&#x6240;&#x4EE5;&#x5F53;&#x4F60;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x4E3A;&#x4E86;&#x6B63;&#x786E;&#x5730;&#x8C03;&#x7528;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;&#x76F8;&#x5173;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x786E;&#x4FDD;&#x4F60;&#x77E5;&#x9053;Optional&#x7C7B;&#x4E2D;&#x503C;&#x7F3A;&#x5931;&#x7684;&#x610F;&#x601D;&#x3002;</p>
+<p>&#x8BF7;&#x786E;&#x4FDD;&#x5728;&#x4E0B;&#x5217;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x8981;&#x4F7F;&#x7528;Optional&#xFF0C;&#x56E0;&#x4E3A;&#x5E76;&#x4E0D;&#x80FD;&#x7ED9;&#x6211;&#x4EEC;&#x5E26;&#x6765;&#x4EFB;&#x4F55;&#x5B9E;&#x8D28;&#x6027;&#x7684;&#x5E2E;&#x52A9;&#xFF1A;</p>
+<p>&#x2022; in the domain model layer (it&#x2019;s not serializable)</p>
+<p>&#x2022; in DTOs (it&#x2019;s not serializable)</p>
+<p>&#x2022; in input parameters of methods</p>
+<p>&#x2022; in constructor parameters</p>
+<p>7&#xFF09;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;Optional&#x5417;&#xFF1F;</p>
+<p>&#x5F53;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x6709;&#x53EF;&#x80FD;&#x662F;null&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5C3D;&#x53EF;&#x80FD;&#x5730;&#x53BB;&#x4F7F;&#x7528;&#x5B83;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4ECE;OpenJDK&#x4E2D;&#x6458;&#x6284;&#x7684;&#x4E00;&#x6BB5;&#x6587;&#x5B57;&#xFF1A;
+    The JSR-335 EG felt fairly strongly that Optional should not be on any more than needed to support the optional-return idiom only.
+    Someone suggested maybe even renaming it to &#x201C;OptionalReturn&#x201C;.</p>
+<p>&#x8FD9;&#x6BB5;&#x6587;&#x5B57;&#x660E;&#x786E;&#x5730;&#x8868;&#x793A;&#xFF0C;&#x5F53;&#x4ECE;&#x5177;&#x4F53;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5C42;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x8BBF;&#x95EE;&#x5C42;&#x6216;&#x8005;&#x5B9E;&#x4F53;&#x4E2D;&#x8FD4;&#x56DE;&#x503C;&#x65F6;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;Optional&#xFF0C;&#x5F53;&#x7136;&#x524D;&#x63D0;&#x662F;Optional&#x80FD;&#x8D77;&#x5230;&#x4F5C;&#x7528;&#x3002;</p>
+<p>8)&#x7ED3;&#x8BBA;</p>
+<p>&#x5728;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x5230;&#x4E86;&#x5982;&#x4F55;&#x7406;&#x89E3;&#x548C;&#x4F7F;&#x7528;java SE8&#x4E2D;java.util&#x5305;&#x4E0B;Optional&#x7C7B;&#x3002;Optional&#x5B58;&#x5728;&#x7684;&#x76EE;&#x7684;&#x4E0D;&#x662F;&#x4E3A;&#x4E86;&#x66FF;&#x4EE3;&#x6211;&#x4EEC;&#x4EE3;&#x7801;&#x4E2D;&#x7B80;&#x5355;&#x7684;null&#x5F15;&#x7528;&#xFF0C;&#x800C;&#x662F;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x8BBE;&#x8BA1;&#x66F4;&#x6E05;&#x6670;&#x660E;&#x4E86;&#x7684;API&#xFF0C;&#x901A;&#x8FC7;&#x9605;&#x8BFB;&#x65B9;&#x6CD5;&#x7684;&#x8BF4;&#x660E;&#xFF0C;&#x4F7F;&#x7528;&#x8005;&#x5C31;&#x80FD;&#x77E5;&#x9053;&#x6709;Optional&#x7C7B;&#xFF0C;&#x53EF;&#x80FD;&#x5B58;&#x5728;null&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4ECE;&#x800C;&#x6070;&#x5F53;&#x5730;&#x53BB;&#x5904;&#x7406;&#x5B83;&#x3002;</p>
+<p>&#x8FD9;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x5389;&#x5BB3;&#x7279;&#x6027;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#xFF0C;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x8BC4;&#x8BBA;&#x533A;&#x548C;&#x6211;&#x4EA4;&#x6D41;&#x4F60;&#x7684;&#x60F3;&#x6CD5;&#x5427;&#x3002;</p>
+<p>&#x5C3D;&#x60C5;&#x4EAB;&#x53D7;&#x5B66;&#x4E60;&#x7684;&#x4E50;&#x8DA3;&#x5427;&#xFF01;!</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="functional-interface.html" class="navigation navigation-prev " aria-label="Previous page: Java8 - 函数式接口">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="how-to-use-predicate.html" class="navigation navigation-next " aria-label="Next page: Java8 - 如何使用Predicate">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Java8 - Optional","level":"1.7","depth":1,"next":{"title":"Java8 - 如何使用Predicate","level":"1.8","depth":1,"path":"how-to-use-predicate.md","ref":"how-to-use-predicate.md","articles":[]},"previous":{"title":"Java8 - 函数式接口","level":"1.6","depth":1,"path":"functional-interface.md","ref":"functional-interface.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"optional.md","mtime":"2018-10-19T18:28:34.780Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-19T18:30:04.683Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
