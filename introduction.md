@@ -1,5 +1,7 @@
 # Java8 介绍
 
+> 原文出处：http://howtodoinjava.com/java-8-tutorial
+
 Java8 在 [2014年初](https://blogs.oracle.com/thejavatutorials/jdk-8-is-released) 发布，在 Java8 中大家讨论最多的特性是 lambda 表达式。
 它还有许多重要的功能，像默认方法、Stream API、新的日期时间API。让我们通过示例来了解这些新功能。
 
@@ -180,4 +182,3 @@ period = Period.between(LocalDate.now(), LocalDate.now().plusDays(60));
 
 > 阅读更多：[日期时间API的改变](date-and-time-api-changes.md)
 
-原文出处：http://howtodoinjava.com/java-8-tutorial
